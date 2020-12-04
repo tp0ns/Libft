@@ -19,13 +19,13 @@ OBJSBONUS = $(SRCSBONUS:.c=.o)
 
 
 $(NAME) : $(OBJS)
-		$(CC) $(SRCS) libft.h $(FLAGS)
+		$(CC) $(SRCS) $(FLAGS)
 		ar r $(NAME) $(OBJS)
 
 all : $(NAME)
 
 bonus : $(OBJS) $(OBJSBONUS)
-		$(CC) $(SRCS) $(SRCSBONUS) libft.h $(FLAGS)
+		$(CC) $(SRCS) $(SRCSBONUS) $(FLAGS)
 		ar r $(NAME) $(OBJS) $(OBJSBONUS)
 
 clean :
