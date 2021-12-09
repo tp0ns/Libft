@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tpons <tpons@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/14 15:34:19 by tpons             #+#    #+#             */
-/*   Updated: 2021/12/07 15:48:56 by tpons            ###   ########.fr       */
+/*   Created: 2019/10/14 16:40:02 by tpons             #+#    #+#             */
+/*   Updated: 2021/12/09 11:41:27 by tpons            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
-void	ft_putstr(char *str)
+void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
 	i = 0;
-	if (!str)
+	if (!s)
 		return ;
-	while (str[i])
-		write(1, &str[i++], 1);
+	while (s[i])
+		write(fd, &s[i++], 1);
 }
